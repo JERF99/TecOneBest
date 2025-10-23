@@ -4,7 +4,8 @@ const app = express();
 const routes = require('./routes/index.routes');
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'public')));
+//Raiz de Proyecto
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 //Implementación de Rutas
 app.use('/', routes);

@@ -1,0 +1,12 @@
+body{
+    /*Dimensiones*/
+    margin: 0;
+    padding: 0;
+
+    /*Paleta de Colores*/
+    --main-color: #1C22D9;
+    --main-color-soft: #464BE7;
+    --main-color-dark: #181DB9;
+    --text-color-white: #ffffff;
+    --text-color-black: #000000;
+}
