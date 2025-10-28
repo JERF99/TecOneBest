@@ -10,3 +10,7 @@ body{
     --text-color-white: #ffffff;
     --text-color-black: #000000;
 }
+
+h1{
+    margin: 0;
+}
