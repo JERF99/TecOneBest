@@ -8,3 +8,13 @@
     /*Diseño*/
     background-color: var(--main-color);
 }
+
+/*Dimensiones Tablet*/
+@media (min-width: 768px) {
+    
+}
+
+/*Dimensiones PC*/
+@media (min-width: 1100px) {
+    
+}
