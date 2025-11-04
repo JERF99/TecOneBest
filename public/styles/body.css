@@ -4,12 +4,19 @@
     padding-top: 100px;
 }
 
-.Contenido-Enganche{
+/*==========================INICIO: (OFERTAS / NUEVO / MAS VENDIDO)==========================*/
+
+.Contenido-Bienvenida{
     margin: 0;
     padding: 0;
 }
 
 .Contenido-Secundario{
+    margin: 0;
+    padding: 0;
+}
+
+.Contenido-Categorias{
     margin: 0;
     padding: 0;
 }
@@ -22,6 +29,12 @@
     border-style: solid;
     border-color: var(--main-color);
     padding: 0;
+}
+
+.contenido-Inicio{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 .VentanaProducto{
@@ -42,6 +55,7 @@
     width: 100%;
     height: 75%;
 
+    /*Dimensiones de Imagen (Producto)*/
     background-position: center;
     background-size: contain;
     background-image: url(/img/BlankSpace.jpg);
@@ -74,12 +88,76 @@
     margin: 10px;
 }
 
-/*Dimensiones Tablet*/
-@media (min-width: 768px) {
-    
+/*==========================SECCION DE CATEGORIA==========================*/
+.contenido-galeria{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
-/*Dimensiones PC*/
+/* Centrar el último elemento si hay un número impar */
+.contenido-galeria > .categoria-opcion:last-child:nth-child(odd) {
+  grid-column: 1 / -1;      /* Ocupa todo el ancho del grid */
+  justify-self: center;     /* Centra el bloque dentro de esa fila */
+  width: 50%;               /* Ajusta el ancho si deseas que no se extienda completamente */
+}
+
+.categoria-opcion{
+    border-style: solid;
+}
+
+.img-categoria{
+    width: 100%;
+    height: 120px;
+
+    /*Dimensiones de Imagen (Categoria)*/
+    background-size: contain;
+    background-position: center;
+    background-image: url(/img/BlankSpace.jpg);
+}
+
+.text-categoria{
+    text-align: center;
+}
+
+/*==========================Dimensiones Tablet==========================*/
+@media (min-width: 500px) {
+    .contenido-galeria{
+    grid-template-columns: repeat(3, 1fr);
+    }
+    .contenido-galeria > .categoria-opcion:last-child:nth-child(odd) {
+    grid-column: auto;
+    width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenido-galeria{
+    grid-template-columns: repeat(4, 1fr);
+    }
+    .contenido-galeria > .categoria-opcion:last-child:nth-child(odd) {
+    grid-column: auto;
+    justify-self:left;
+    }
+}
+
+/*==========================Dimensiones PC==========================*/
 @media (min-width: 1100px) {
-    
+    .contenido-galeria{
+    grid-template-columns: repeat(5, 1fr);
+    }
+    .contenido-galeria > .categoria-opcion:last-child:nth-child(odd) {
+    grid-column: auto;
+    justify-self:center;
+    }
+}
+
+@media (min-width: 1300px) {
+    .contenido-galeria{
+    grid-template-columns: repeat(6, 1fr);
+    }
+    .contenido-galeria > .categoria-opcion:last-child:nth-child(odd) {
+    grid-column: auto;
+    justify-self:center;
+    }
 }
