@@ -99,6 +99,7 @@
 
 /*==========================SECCION DE CATEGORIA==========================*/
 .contenido-galeria{
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -201,9 +202,6 @@
     }
     .contenido-Inicio{
         margin-inline: 20px;
-    }
-    .contenido-Inicio.MasVendido{
-
     }
     .contenido-galeria > .categoria-opcion:last-child:nth-child(odd) {
     grid-column: auto;
