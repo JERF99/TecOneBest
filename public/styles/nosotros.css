@@ -29,23 +29,57 @@
     color: var(--text-color-white);
 }
 
-.mision-vision-nosotros{
+.cuadro-nosotros{
     color: var(--text-color-white);
-    gap: 10px;
-}
-
-.Mision-cuadro{
     background-color: var(--main-color);
+    padding: 10px;
 }
 
-.Vision-cuadro{
-    background-color: var(--main-color);
+.formularioContacto{
+    display: flex;
+    flex-direction: column;
 }
 
-.contacto-nosotros{
-    
+@media (min-width: 500px) {
+    .Cuerpo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mision-vision-nosotros{
+        width: 80%;
+    }
+    .contacto-nosotros{
+        width: 80%;
+    }
+    .redes-nosotros{
+        width: 80%;
+    }
 }
 
-.redes-nosotros{
+@media (min-width: 700px) {
+    .mision-vision-nosotros{
+        display: flex;
+        width: 100%;
+    }
+    .contacto-nosotros{
+        width: 80%;
+    }
+    .redes-nosotros{
+        width: 80%;
+    }
+}
 
+@media (min-width: 900px) {
+    .mision-vision-nosotros{
+        width: 80%
+    }
+    .cuadro-nosotros.contacto{
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .redes-nosotros{
+        width: 80%;
+    }
 }
