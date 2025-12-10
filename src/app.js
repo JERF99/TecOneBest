@@ -4,8 +4,12 @@ const app = express();
 const routes = require('./routes/index.routes');
 const path = require('path');
 
-//Raiz de Proyecto
+//TecOneBest Website
 app.use(express.static(path.join(__dirname, '..', 'public')));
+
+//Admin Dashboard
+app.use('/admin', express.static(path.join(__dirname, '..', 'admin')));
+
 
 //Implementación de Rutas
 app.use('/', routes);
