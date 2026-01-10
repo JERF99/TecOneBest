@@ -1,4 +1,6 @@
-const Login = document.getElementById("login-container");
+
+(()=>{
+const productoContainer = document.getElementById("login-container");
 
 function buscarLogin(callback){
     fetch("../html/login.html")
@@ -9,19 +11,18 @@ function buscarLogin(callback){
 }
 
 function cargarLogin(docHTML){
-    Login.innerHTML = docHTML;
+    productoContainer.innerHTML = docHTML;
 
-    //Estilos de Login
-    Login.style.position = "fixed";
-    Login.style.zIndex = "11";
-    Login.style.top = "0";
-    Login.style.left = "0";
+    productoContainer.style.position = "fixed";
+    productoContainer.style.zIndex = "11";
+    productoContainer.style.top = "0";
+    productoContainer.style.left = "0";
 
     document.dispatchEvent(new Event("LoginCargado"));
 }
 
 function cerrarLogin(){
-    Login.innerHTML = "";
+    productoContainer.innerHTML = "";
 }
 
 document.addEventListener("headerCargado", () => {
@@ -39,4 +40,4 @@ document.addEventListener("LoginCargado", () => {
         cerrarLogin();
     });
 })
-
+});
