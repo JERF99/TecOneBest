@@ -3,4 +3,4 @@ fetch("/html/header.html")
     .then(data => {
         document.getElementById("header-container").innerHTML = data;
         document.dispatchEvent(new Event("headerCargado"));
-    });
+});

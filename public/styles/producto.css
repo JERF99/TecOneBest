@@ -1,0 +1,94 @@
+.fondo-producto{
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000bb;
+    display: flex;
+    /*Alinear al Centro*/
+    align-items: center;        /*Vertical*/
+    justify-content: center;    /*Horizontal*/
+}
+
+.cuadroProducto{
+    height: 80%;
+    margin-inline: 5%;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+}
+/*Seccion Portada*/
+.section-productoPortada{
+    flex: 1;
+    background-color: white;
+    position: relative;
+}
+
+.cerrarVentana{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.txtPrecio{
+    /*Posicionamiento*/
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    /*Diseño*/
+    background-color: var(--main-color);
+    font-size: 30px;
+    
+}
+
+/*Seccion Contenido*/
+.section-productoContenido{
+    flex: 1;
+    padding: 5%;
+    display: flex;
+    min-height: 0;
+    text-align: justify;
+    gap: 10px;
+}
+
+/*Lado Izquierdo*/
+.spc-left{
+    flex: 7;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+/*Lado Derecho*/
+.spc-right{
+    padding: 5px;
+    flex: 3;
+    display: grid;
+    grid-template-columns: 1;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.cantidadInput{
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (min-width: 600px) {
+    .cuadroProducto{
+        width: 80%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-productoPortada{
+        flex: 7;
+    }
+    .section-productoContenido{
+        flex: 3;
+    }
+    .cuadroProducto{
+        width: 50%;
+    }
+}

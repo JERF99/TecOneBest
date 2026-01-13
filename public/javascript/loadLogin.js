@@ -1,5 +1,3 @@
-
-(()=>{
 const productoContainer = document.getElementById("login-container");
 
 function buscarLogin(callback){
@@ -40,4 +38,3 @@ document.addEventListener("LoginCargado", () => {
         cerrarLogin();
     });
 })
-});
