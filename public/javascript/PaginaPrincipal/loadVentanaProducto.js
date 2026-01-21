@@ -1,7 +1,7 @@
 const productoContainer = document.getElementById("producto-detalle-container");
 
 function buscarVentana(callback){
-    fetch("../html/ventanaProducto.html")
+    fetch("../html/PaginaPrincipal/ventanaProducto.html")
         .then(response => response.text())
         .then(data => {
             callback(data);
