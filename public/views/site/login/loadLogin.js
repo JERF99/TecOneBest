@@ -9,7 +9,7 @@ function crearContenedorSiNoExiste() {
 }
 
 function buscarLogin(callback){
-    fetch("/views/login/login.html")
+    fetch("/views/site/login/login.html")
     .then(response => response.text())
     .then(data => {
         callback(data);

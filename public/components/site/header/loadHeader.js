@@ -1,6 +1,6 @@
 import { loadRoute } from "/javascript/router.js";
 
-fetch("/components/header/header.html")
+fetch("/components/site/header/header.html")
     .then(res => res.text())
     .then(html => {
         document.getElementById("header-container").innerHTML = html;

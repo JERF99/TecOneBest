@@ -1,0 +1,78 @@
+/*---------------------TITULO---------------------*/
+.CuerpoCarrito{
+    padding-top: 100px;
+    min-width: 100%;
+}
+
+.Carrito{
+    min-width: 100%;
+    justify-items: center;
+}
+/*---------------------WidgetCarrito---------------------*/
+.widgetCarritoProducto{
+    /*Diseño*/
+    border-style: solid;
+    box-sizing: border-box;
+    min-width: 300px;
+    margin: 20px;
+}
+
+.imgCarritoProducto{
+    height: 200px;
+    width: 100%;
+    background-image: url(/img/BlankSpace.jpg);
+    background-size: contain;
+    background-position: center;
+}
+
+.desCarritoProducto{
+    display: flex;
+    background-color: var(--main-color);
+    color: var(--text-color-white);
+    padding: 5%;
+}
+
+.infoCart{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoCart.right label{
+    align-self:flex-end;
+}
+
+.infoCart.right button {
+    align-self:flex-end;
+    width: fit-content;
+}
+
+@media (min-width: 600px){
+    .Carrito.Contenido{
+        min-width: 60%;
+    }
+    .Carrito.Resumen{
+        min-width: 40%;
+    }
+    .widgetCarritoProducto{
+        display: flex;
+        min-width: 500px;
+    }
+    .imgCarritoProducto{
+        flex: 8;
+    }
+    .desCarritoProducto{
+        flex: 12;
+    }
+}
+
+@media (min-width: 768px){
+    .CuerpoCarrito{
+        display: flex;
+        flex-direction: row;
+    }
+    .widgetCarritoProducto{
+        display: flex;
+        min-width: 700px;
+    }
+}
