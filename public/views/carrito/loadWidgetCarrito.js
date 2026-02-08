@@ -1,5 +1,5 @@
 function cargarWidgetCarrito(){
-    fetch("/views/site/carrito/widgetCarrito.html")
+    fetch("/views/carrito/widgetCarrito.html")
         .then(response => response.text())
         .then(html => {
             const docHtml = document.getElementById("widget-carrito-container");

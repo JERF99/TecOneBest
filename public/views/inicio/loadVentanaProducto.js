@@ -9,7 +9,7 @@ function crearContenedorSiNoExiste() {
 }
 
 function buscarVentana(callback){
-    fetch("/views/site/inicio/ventanaProducto.html")
+    fetch("/views/inicio/ventanaProducto.html")
         .then(response => response.text())
         .then(data => {
             callback(data);
