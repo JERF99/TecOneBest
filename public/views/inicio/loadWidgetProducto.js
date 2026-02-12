@@ -1,7 +1,7 @@
 import { abrirVentanaProducto } from "./loadVentanaProducto.js";
 
 function cargarWidgetProducto(){
-    fetch("/views/inicio/widgetProducto.html")
+    fetch("/layouts/widgetProducto.html")
     .then(response => response.text())
     .then(htmlPlantilla => {
         

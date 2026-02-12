@@ -13,6 +13,5 @@ pool.connect()
     .then(() => console.log('Base de datos conectada'))
     .catch(err => console.error('Error DB:', err));
 
-
 module.exports = pool;
 
