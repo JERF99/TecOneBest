@@ -3,6 +3,7 @@ const routes = {
     inicio: '/views/inicio/inicio.html',
     carrito: '/views/carrito/carrito.html',
     nosotros: '/views/nosotros/nosotros.html',
+    categorias: 'views/categorias/categorias.html'
 };
 
 export async function loadRoute(route) {
@@ -23,12 +24,17 @@ export async function loadRoute(route) {
     if (route === "inicio") {
         const modulo = await import("/views/inicio/inicio.js");
         modulo.initInicio();
-        import("/views/inicio/loadVentanaProducto.js");
     }
 
     //Cargar componentes de pagina Carrito
     if (route === "carrito"){
         const modulo = await import("/views/carrito/carrito.js");
         modulo.initCarrito();
+    }
+
+    //Cargar pagina de categorias
+    if(route == "categorias"){
+        const modulo = await import("/views/categorias/categorias.js");
+        modulo.initCategorias();
     }
 }

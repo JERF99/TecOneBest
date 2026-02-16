@@ -26,6 +26,10 @@
 
 /*==========================INICIO: (OFERTAS / NUEVO / MAS VENDIDO)==========================*/
 
+.case-contenido > h2{
+    text-align: center;
+}
+
 .Contenido-Section{
     margin: 0;
     padding: 0;

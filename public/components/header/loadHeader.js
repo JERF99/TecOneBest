@@ -5,13 +5,6 @@ fetch("/components/header/header.html")
     .then(html => {
         document.getElementById("header-container").innerHTML = html;
 
-    const loginBtn = document.getElementById("openLogin");
-
-    loginBtn?.addEventListener("click", e => {
-        e.preventDefault();
-        window.abrirLogin();
-    });
-
     document.addEventListener("click", async (e) => {
     const link = e.target.closest("a[data-route]");
     if (!link) return;
