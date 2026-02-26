@@ -11,6 +11,7 @@ export async function loadRoute(route) {
     if (!path) return;
 
     const html = await fetch(path).then(r => r.text());
+    document.getElementById("app").innerHTML = "";
     document.getElementById("app").innerHTML = html;
 
     //Resetear Scroll
@@ -31,10 +32,26 @@ export async function loadRoute(route) {
         const modulo = await import("/views/carrito/carrito.js");
         modulo.initCarrito();
     }
+}
+
+export async function loadCategoria(route, datoType){
+    const path = routes[route];
+    if (!path) return;
+
+    const html = await fetch(path).then(r => r.text());
+    document.getElementById("app").innerHTML = "";
+    document.getElementById("app").innerHTML = html;
+
+    //Resetear Scroll
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant" // o "smooth"
+    });
 
     //Cargar pagina de categorias
-    if(route == "categorias"){
+    if(route === "categorias"){
         const modulo = await import("/views/categorias/categorias.js");
-        modulo.initCategorias();
+        modulo.initCategorias(datoType);
     }
 }

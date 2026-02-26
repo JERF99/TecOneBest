@@ -1,9 +1,9 @@
 import { cargarWidgetProducto } from "./loadWidgetProducto.js";
 import { abrirVentanaProducto } from "./loadVentanaProducto.js"
-import { loadRoute } from "../../javascript/router.js";
+import { loadCategoria, loadRoute } from "../../javascript/router.js";
 
 export function initInicio() {
-    cargarWidgetProducto();
+    cargarWidgetProducto("inicio");
 }
 
 //Ver mas información Producto
@@ -16,6 +16,9 @@ document.addEventListener("click", (e) => {
 //Ver productos por categorias
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("img-categoria")) {
-        loadRoute("categorias");
+        const categoria = e.target.closest(".categoria-opcion");
+        if (!categoria) return;
+        const parametro = categoria.dataset.parametro;
+        loadCategoria("categorias", parametro);
     }
 });

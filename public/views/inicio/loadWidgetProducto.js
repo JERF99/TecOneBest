@@ -1,6 +1,14 @@
 import { abrirVentanaProducto } from "./loadVentanaProducto.js";
 
-function cargarWidgetProducto(){
+function cargarWidgetProducto(page){
+    if(page==="inicio"){
+        cargarProInicio();
+    }else if(page==="categorias"){
+        cargarProCategorias();
+    }
+}
+
+function cargarProInicio(){
     fetch("/layouts/widgetProducto.html")
     .then(response => response.text())
     .then(htmlPlantilla => {
@@ -24,6 +32,16 @@ function cargarWidgetProducto(){
         }
 
     });
+}
+
+function cargarProCategorias(){
+    fetch("layouts/widgetProducto.html")
+        .then(response => response.text())
+        .then(htmlPlantilla => {
+            const contenedor = document.getElementById("producto-container");
+            
+            contenedor.innerHTML += htmlPlantilla;
+        })
 }
 
 document.addEventListener("click", (e) => {

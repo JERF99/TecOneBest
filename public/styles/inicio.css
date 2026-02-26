@@ -123,15 +123,15 @@
     .Contenido-Section.Ofertas{
         grid-area: ofertas;
     }
-    .producto-container-ofertas{
+    .producto-container.ofertas{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
-    .producto-container-lonuevo{
+    .producto-container.lonuevo{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    .producto-container-masvendido{
+    .producto-container.masvendido{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
