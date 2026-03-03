@@ -34,14 +34,44 @@ function cargarProInicio(){
     });
 }
 
-function cargarProCategorias(){
-    fetch("layouts/widgetProducto.html")
-        .then(response => response.text())
-        .then(htmlPlantilla => {
-            const contenedor = document.getElementById("producto-container");
-            
-            contenedor.innerHTML += htmlPlantilla;
-        })
+async function cargarProCategorias(){
+        try {
+        const response = await fetch('/api/productos');
+
+        if (!response.ok) {
+            throw new Error("Error en la respuesta del servidor");
+        }
+
+        const productos = await response.json();
+
+        const contenedor = document.getElementById("producto-container");
+
+        contenedor.innerHTML = "";
+
+        const fragment = document.createDocumentFragment();
+
+        productos.forEach(producto => {
+
+            const div = document.createElement("div");
+            div.classList.add("producto");
+
+            const titulo = document.createElement("h3");
+            titulo.textContent = producto.nombre;
+
+            const precio = document.createElement("p");
+            precio.textContent = `Precio: $${producto.precio}`;
+
+            div.appendChild(titulo);
+            div.appendChild(precio);
+
+            fragment.appendChild(div);
+        });
+        
+        contenedor.appendChild(fragment);
+
+    } catch (error) {
+        console.error("Error cargando productos:", error);
+    }
 }
 
 document.addEventListener("click", (e) => {
