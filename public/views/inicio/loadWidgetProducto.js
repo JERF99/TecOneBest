@@ -1,10 +1,18 @@
-import { abrirVentanaProducto } from "./loadVentanaProducto.js";
+let plantillaCache = null;
 
-function cargarWidgetProducto(page){
+async function obtenerPlantilla(){
+    if(!plantillaCache){
+    plantillaCache = await fetch("/layouts/widgetProducto.html")
+    .then(r=>r.text());
+    }
+    return plantillaCache;
+}
+
+function cargarWidgetProducto(page, typeCat){
     if(page==="inicio"){
         cargarProInicio();
     }else if(page==="categorias"){
-        cargarProCategorias();
+        cargarProCategorias(typeCat);
     }
 }
 
@@ -34,50 +42,26 @@ function cargarProInicio(){
     });
 }
 
-async function cargarProCategorias(){
-        try {
-        const response = await fetch('/api/productos');
-
-        if (!response.ok) {
-            throw new Error("Error en la respuesta del servidor");
-        }
-
-        const productos = await response.json();
-
-        const contenedor = document.getElementById("producto-container");
-
-        contenedor.innerHTML = "";
-
-        const fragment = document.createDocumentFragment();
-
-        productos.forEach(producto => {
-
-            const div = document.createElement("div");
-            div.classList.add("producto");
-
-            const titulo = document.createElement("h3");
-            titulo.textContent = producto.nombre;
-
-            const precio = document.createElement("p");
-            precio.textContent = `Precio: $${producto.precio}`;
-
-            div.appendChild(titulo);
-            div.appendChild(precio);
-
-            fragment.appendChild(div);
-        });
-        
-        contenedor.appendChild(fragment);
-
-    } catch (error) {
-        console.error("Error cargando productos:", error);
+async function cargarProCategorias(categoriaID){
+    const response = await fetch(`/api/productos?categoria=${categoriaID}`);
+    // verificamos si el servidor respondió correctamente
+    if(!response.ok){
+        throw new Error("Error en la API");
     }
+    const productos = await response.json();
+    const contenedor = document.getElementById("producto-container");
+    contenedor.innerHTML = "";
+    const plantillaHTML = await obtenerPlantilla();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(plantillaHTML,"text/html");
+    const plantilla = doc.querySelector(".VentanaProducto");
+    productos.forEach(producto=>{
+        const clone = plantilla.cloneNode(true);
+        clone.querySelector(".info-title").textContent = producto.nombre;
+        clone.querySelector(".infor-precio").textContent = `$${producto.precio}`;
+        contenedor.appendChild(clone);
+    });
+
 }
-
-document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("div-verInfo")) {
-        abrirVentanaProducto();
-    }
-});
 
 export { cargarWidgetProducto };
