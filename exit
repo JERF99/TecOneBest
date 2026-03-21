@@ -1,0 +1,149 @@
+[33mcommit 4931a1b0fa22f3f21620bdb578fefc9beb28402e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Thu Mar 19 17:01:07 2026 -0600
+
+    99 registros nuevos en DB
+
+[33mcommit 14ce787eddeca79f5aa54cd5beee1247dbc35545[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Thu Mar 5 22:36:13 2026 -0600
+
+    nav Backend categorias
+
+[33mcommit dea6d28f4045d99a7e50178a0a6a3bdf8eb8c768[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Mon Mar 2 22:43:26 2026 -0600
+
+    Show Products on Frontend
+
+[33mcommit b4f5aa17014ed1d166a558adc57312dae72cefed[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Wed Feb 25 23:35:47 2026 -0600
+
+    categorias.js connected
+
+[33mcommit 5bd2175bd38674779e62b3f977679f040085f2bd[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Mon Feb 16 16:29:49 2026 -0600
+
+    Analisis Estructura Categorias
+
+[33mcommit fcdc491dac9bf3b379921124655bc22e5a9186e4[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Wed Feb 11 21:37:19 2026 -0600
+
+    Imagenes en categoriasInicio.html
+
+[33mcommit a3fb87d5f805d7d408e7471565276c20c9342a8d[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Tue Feb 10 21:34:54 2026 -0600
+
+    Database Connected
+
+[33mcommit 46ba12f490b0fe978bd5bcaf9846a304cc7acf1d[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Sat Feb 7 22:19:58 2026 -0600
+
+    Conversion Proyecto - Site Application
+
+[33mcommit 06dcac09013d6cbddc769a83d2a6015cd53f80d6[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Fri Jan 30 23:41:37 2026 -0600
+
+    Estructura Admin
+
+[33mcommit 4ac4990877ac45159f521e87e4761d9ef0c55449[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Fri Jan 30 16:26:58 2026 -0600
+
+    MPA -> SPA
+
+[33mcommit 21e8f4e3c5cb7a6e27670b0bd8e8d8049bbd84bc[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Tue Jan 20 21:24:09 2026 -0600
+
+    Limpieza Estructura
+
+[33mcommit e642c01d333488e19cf2481cd117be2a6f16593b[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Mon Jan 12 23:16:52 2026 -0600
+
+    producto.html created
+
+[33mcommit 9c1aa70d954afd9eb532d87bb7e20ad5cad6ca4e[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Fri Jan 9 23:14:14 2026 -0600
+
+    Modularizacion
+
+[33mcommit 7e34be36352ce85a7de3ea99bc80c50c409582d3[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Wed Jan 7 21:31:51 2026 -0600
+
+    productos.html created
+
+[33mcommit 8bb30e4edb9c11d58a87ded6be99cee3cb4ca5c3[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Tue Dec 9 21:18:12 2025 -0600
+
+    DB Connection / New Structure HTML
+
+[33mcommit cfc886c18d9a16338dc952dd6a2ce99550bd4e39[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Thu Nov 13 21:36:58 2025 -0600
+
+    Page Nosotros Created
+
+[33mcommit f1e4e93584aa50c98ec9d8a52ce7db8cd82a1aab[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Mon Nov 10 21:28:17 2025 -0600
+
+    se creo conexion pages .html
+
+[33mcommit b0347c8ec11131c8f6a5cf0971e7d23a4c580a1d[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Sun Nov 9 18:58:12 2025 -0600
+
+    Se creo Login.html
+
+[33mcommit 8608d617945feb0974ab0861484f28cab1ce68be[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Tue Nov 4 21:42:58 2025 -0600
+
+    Estructura HomePage Terminada
+
+[33mcommit 8996839a76eac7eb880062eeb58e9f42bd62cf49[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Mon Nov 3 21:54:27 2025 -0600
+
+    Avance Estilo HomePage 3
+
+[33mcommit d595fb2a4ae3098b607040e514ac3da815ee7ae1[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Wed Oct 29 21:07:01 2025 -0600
+
+    Avance Estilo HomePage 2
+
+[33mcommit ebf16fdced9ab1d1ab1178ff788b037bf553e307[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Mon Oct 27 21:49:30 2025 -0600
+
+    Avance estilo de HomePage
+
+[33mcommit d5d5fd9c786c9e4fca1d855bb0dfae83bee790c7[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Wed Oct 22 21:10:13 2025 -0600
+
+    Se creo conexion Header y Footer
+
+[33mcommit d5116a153b2623ba10e0e2a69d9e2198450ba6cb[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Mon Oct 20 21:45:58 2025 -0600
+
+    Se creo Router
+
+[33mcommit c3af5a4293fbc61b81eb86bf9e4bb0e77afc9e4e[m
+Author: JERF99 <jerf.2025.frej@gmail.com>
+Date:   Sun Oct 19 19:48:35 2025 -0600
+
+    Mi Primer Commit
